@@ -13,10 +13,10 @@ def create_app(config_class=Config):
 
     db.init_app(app)
     bcrypt.init_app(app)
-    # Hanya izinkan request dari vm-fe (Tailscale IP: 100.70.184.49)
+    # Hanya izinkan request dari vm-fe (host-only IP: 192.168.56.104)
     # Untuk production, ganti dengan domain aktual: https://yourdomain.com
     CORS(app, origins=[
-        "http://100.70.184.49:3000",
+        "http://192.168.56.104:3000",
     ])
 
     with app.app_context():

@@ -5,8 +5,8 @@ services:
     restart: unless-stopped
     env_file: .env
     ports:
-      # Bind ke IP Tailscale vm-db, tidak expose ke publik
-      - "100.111.166.88:5432:5432"
+      # Bind ke IP host-only vm-db, tidak expose ke publik
+      - "192.168.56.102:5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:

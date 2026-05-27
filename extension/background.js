@@ -1,10 +1,10 @@
 // ── Environment URLs ──────────────────────────────────────────
-// vm-be (Tailscale): 100.116.57.50
-// vm-fe (Tailscale): 100.70.184.49
-// Production:        https://api.yourdomain.com / https://yourdomain.com
+// vm-be host-only: 192.168.56.103
+// vm-fe host-only: 192.168.56.104
+// Production:      https://api.yourdomain.com / https://yourdomain.com
 
-const API_URL      = "http://100.116.57.50/api/blacklist/";
-const REDIRECT_URL = "http://100.70.184.49:3000/hold-on";
+const API_URL      = "http://192.168.56.103/api/blacklist/";
+const REDIRECT_URL = "http://192.168.56.104:3000/hold-on";
 
 async function fetchAndSyncRules() {
   try {
